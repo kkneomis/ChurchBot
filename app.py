@@ -23,6 +23,15 @@ def job_function():
     jarvis.postLink(link)
     print "Link %s sent at %s" % (link, str(datetime.now()))
 
+
+@cron.cron_schedule(day_of_week='fri', hour=2 , minute=34)
+def job_function():
+    # Do your work here
+    message = "Good morning class, here is the hangout link!"
+    link = "https://hangouts.google.com/hangouts/_/cfrz4i5iuzhfddbwoos23ji6xee"
+    jarvis.postLink(link)
+    print "Link %s sent at %s" % (link, str(datetime.now()))
+
 # Shutdown your cron thread if the web process is stopped
 atexit.register(lambda: cron.shutdown(wait=False))
 

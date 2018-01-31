@@ -15,7 +15,7 @@ cron.start()
 
 print "Starting bot......"
 
-@cron.cron_schedule(day_of_week='mon', hour=3 , minute=25)
+@cron.cron_schedule(day_of_week='sun', hour=15 , minute=25)
 def job_function():
     # Do your work here
     message = "Good morning class, here is the hangout link!"

@@ -17,8 +17,17 @@ print "Starting bot......"
 
 @cron.cron_schedule(day_of_week='sun', hour=15 , minute=25)
 def job_function():
-    # Do your work here
+    # This happens every Sunday at 9:30 am central time
     message = "Good morning class, here is the hangout link!"
+    link = "https://hangouts.google.com/hangouts/_/cfrz4i5iuzhfddbwoos23ji6xee"
+    jarvis.postLink(link)
+    print "Link %s sent at %s" % (link, str(datetime.now()))
+
+
+@cron.cron_schedule(day='last sun', hour=23, minute=59)
+def job_function():
+    # This happens on the last Sunday of every month at 7:00pm central time
+    message = "Good evening class, please use this link to join the hangout at 7:00pm"
     link = "https://hangouts.google.com/hangouts/_/cfrz4i5iuzhfddbwoos23ji6xee"
     jarvis.postLink(link)
     print "Link %s sent at %s" % (link, str(datetime.now()))

@@ -15,7 +15,7 @@ cron.start()
 
 print "Starting bot......"
 
-@cron.cron_schedule(day_of_week='sun', hour=15 , minute=25)
+@cron.cron_schedule(day_of_week='sun', hour=16 , minute=25)
 def job_function():
     # This happens every Sunday at 9:30 am central time
     message = "Good morning class, here is the hangout link!"
@@ -24,7 +24,7 @@ def job_function():
     print "Link %s sent at %s" % (link, str(datetime.now()))
 
 
-@cron.cron_schedule(day='last sun', hour=23, minute=59)
+@cron.cron_schedule(day='first mon', hour=1, minute=00)
 def job_function():
     # This happens on the last Sunday of every month at 7:00pm central time
     message = "Good evening class, please use this link to join the hangout at 7:00pm"

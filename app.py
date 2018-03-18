@@ -17,7 +17,7 @@ print "Starting bot......"
 print "TIme now is", now
 
 
-@cron.cron_schedule(day_of_week='sun', hour=18 , minute=11)
+@cron.cron_schedule(day_of_week='sun', hour=22 , minute=21)
 def job_function():
     # This happens every Sunday at 9:30 am central time
     message = "Good morning class, here is the hangout link!"

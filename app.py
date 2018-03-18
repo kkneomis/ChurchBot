@@ -17,13 +17,13 @@ print "Starting bot......"
 print "TIme now is", now
 
 
-@cron.cron_schedule(day_of_week='sun', hour=22 , minute=21)
+@cron.cron_schedule(day_of_week='sun', hour=14 , minute=25)
 def job_function():
     # This happens every Sunday at 9:30 am central time
     message = "Good morning class, here is the hangout link!"
     print "Sending link....."
-    link = "Test, please ignore this"
-    #link = "https://hangouts.google.com/hangouts/_/cfrz4i5iuzhfddbwoos23ji6xee"
+    #link = "Test, please ignore this"
+    link = "https://hangouts.google.com/hangouts/_/cfrz4i5iuzhfddbwoos23ji6xee"
     jarvis.postLink(link)
     print "Link %s sent at %s" % (link, str(datetime.now()))
 
